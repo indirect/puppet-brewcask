@@ -12,10 +12,6 @@ class brewcask {
 
   homebrew::tap { 'caskroom/cask': }
 
-  file { $cask_home:
-    ensure => directory
-  }
-
   # This prevents typing root password the first time a cask is installed
   file { $cask_room:
     ensure  => directory,
